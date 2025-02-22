@@ -1,10 +1,12 @@
 # Abacus - reading time
 Chrome extension - approximates reading time by counting words on the page. 
 
-- by default - counts all content on a page. 
+pop-up small window in the middle of the page - appears for 3 seconds (customizable)
+
+- By default - counts all content on a page.
 - If only some text selected when called  - counts only selected
 
-Written with chatGPT
+Written with chatGPT and DeepSeek R1
 
 ## Setup:
 1. Go to `chrome://extensions/`
@@ -14,8 +16,10 @@ Written with chatGPT
 
 #### Optional:
 5. Add shortcut - go to `chrome://extensions/shortcuts` click `edit` button on `Activate the extension`. Set desirable shortcut e.g. `control+shift+W`
-6. Change reading speed variable. In [./content.js](./content.js) change `WORDS_PER_MINUTE: {EN: 200}` value according to ur reading speed. 
+6. Customize few variables. In [./content.js](./content.js):
+   1. Change reading speed variable.  `WORDS_PER_MINUTE: {EN: 200}` value according to ur reading speed. 
    - if dont need second language. comment out | delete `'RU'` line lower in the `'alert'` block. 
+   2. Change auto close time variable `AUTO_CLOSE_TIME: 3000` default 3 sec. 1 sec = 1000. 
 
 
 ## File structure:
@@ -32,7 +36,6 @@ abacus_reading_time/
 |-- README.md
 
 ```
-
 
 ## inspired by
 [Steven-Roberts/Word-Counter-Plus](https://github.com/Steven-Roberts/Word-Counter-Plus)
