@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Abacus - reading time",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Abacus - reading time. approximates reading time by counting words on the page. By default - counts all content on a page. If only some text selected when called  - counts only selected",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
